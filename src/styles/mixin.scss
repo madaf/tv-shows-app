@@ -1,0 +1,7 @@
+@import "./_variables.scss";
+
+@mixin small-breakpoint {
+    @media (min-width: #{$screen-sm}) {
+        @content;
+    }
+ }
