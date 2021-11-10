@@ -1,24 +1,24 @@
 <template>
-<table class="shows-table">
-  <thead>
-    <tr class="shows-table__head-row">
-      <th class="shows-table__th-image"></th>
-      <th>Rank & Name</th>
-      <th>Rating</th>
-    </tr>
-  </thead>
-  <tbody class="shows-table__body">
-    <TvShowRow
-      v-for="(show, index) in tvShowsByRating"
-      :key="show.id"
-      :show-name="show.name"
-      :show-image="show.image.medium"
-      :show-rating="show.rating.average"
-      :show-ranking="index + 1"
-      class="shows-table__body-row"
-    />
-  </tbody>
-</table>
+  <table class="shows-table">
+    <thead>
+      <tr class="shows-table__head-row">
+        <th class="shows-table__th-image"></th>
+        <th>Rank & Name</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody class="shows-table__body">
+      <TvShowRow
+        v-for="(show, index) in tvShowsByRating"
+        :key="show.id"
+        :show-name="show.name"
+        :show-image="show.image.medium"
+        :show-rating="show.rating.average"
+        :show-ranking="index + 1"
+        class="shows-table__body-row"
+      />
+    </tbody>
+  </table>
 </template>
 
 <script>
@@ -36,14 +36,6 @@ export default {
       required: true,
       type: Array
     }
-  },
-
-  data() {
-    return {
-    }
-  },
-
-  computed: {
   },
 }
 </script>
